@@ -34,14 +34,31 @@ class FormTextField: UIView {
     func setImage(imageName: String) {
         self.icon.image = UIImage(named: imageName)
     }
-    
-    @IBAction func onEditingColor(_ sender: Any) {
-        textField.changeBorderColor(withColor: UIColor.systemBlue)
+
+    @IBAction func onEditing(_ sender: BottomBorderedTextField) {
+        guard let text = sender.text else {return}
+        
+        print("EM: \(StringUtils.getErrorMessage(forType: sender.type))")
+
+        if StringUtils.evaluate(type: sender.type, string: text) {
+            self.infoLabel.text = StringUtils.getErrorMessage(forType: sender.type)
+            
+            UIView.animate(withDuration: 0.5) {
+                self.infoLabel.alpha = 0.0
+                self.textField.changeBorderColor(withColor: UIColor.init(red: 102/255, green: 221/255, blue: 108/255, alpha: 1.0))
+
+            }
+            
+          } else {
+                self.infoLabel.text = StringUtils.getErrorMessage(forType: sender.type)
+                
+            UIView.animate(withDuration: 0.5) {
+                self.infoLabel.alpha = 1.0
+                self.textField.changeBorderColor(withColor: UIColor.init(red: 238/255, green: 82/255, blue: 53/255, alpha: 1.0))
+            }
+          }
     }
     
-    @IBAction func onNotEditingColor(_ sender: Any) {
-        textField.changeBorderColor(withColor: UIColor.gray)
-    }
     
     
 }

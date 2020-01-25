@@ -11,6 +11,7 @@ import UIKit
 class BottomBorderedTextField: UITextField {
     
     var bottomBorder: UIView?
+    var type: textFieldType = .name
 
     override func awakeFromNib() {
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -39,6 +40,10 @@ class BottomBorderedTextField: UITextField {
     
     func changeTextColor(withColor color: UIColor) {
         self.textColor = color
+    }
+    
+    func changeTypeOfTextField(type: textFieldType) {
+        self.type = type
     }
     
     func setPlaceholder(withText ph: String) {

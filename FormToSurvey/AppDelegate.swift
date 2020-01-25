@@ -12,12 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    lazy var coreDataStack = CoreDataStack(modelName: "Survey")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        guard let navController = window?.rootViewController as? UINavigationController else {return true}
+        guard let firstView = navController.topViewController as? ViewController else {return true}
+                
+        firstView.managedContext = self.coreDataStack.managedContext
+        
         return true
     }
-
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        coreDataStack.saveContext()
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        coreDataStack.saveContext()
+    }
 
 
 }

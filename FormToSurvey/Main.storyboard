@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Datos-->
         <scene sceneID="Daq-oC-tnT">
             <objects>
                 <viewController id="pVu-oU-RPQ" customClass="ViewController" customModule="FormToSurvey" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,80 +23,80 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-FG-UQq">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-FG-UQq">
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gkh-UJ-mWV" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="636"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="623.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="1pn-Sn-HtR">
-                                                <rect key="frame" x="137" y="5" width="100" height="100"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1pn-Sn-HtR">
+                                                <rect key="frame" x="137" y="0.5" width="100" height="99"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="3J4-c5-r8u"/>
                                                     <constraint firstAttribute="height" constant="100" id="BHx-oC-JIP"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor llena el siguiente formulario con tus datos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBL-Km-esl">
-                                                <rect key="frame" x="20" y="115" width="354" height="41"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor llena el siguiente formulario con tus datos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBL-Km-esl">
+                                                <rect key="frame" x="20" y="110" width="354" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="PR9-nN-vqJ">
-                                                <rect key="frame" x="0.0" y="166" width="374" height="450"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="PR9-nN-vqJ">
+                                                <rect key="frame" x="0.0" y="158.5" width="374" height="445"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io0-GR-WNw" userLabel="Nombre" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="Vga-Xv-ajN"/>
+                                                            <constraint firstAttribute="height" constant="65" id="Vga-Xv-ajN"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeD-EW-gCH" userLabel="Apellido Paterno" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="80" width="374" height="40"/>
+                                                        <rect key="frame" x="0.0" y="79" width="374" height="65"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="W8j-LW-NXx"/>
+                                                            <constraint firstAttribute="height" constant="65" id="W8j-LW-NXx"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t58-6h-3f2" userLabel="Apellido Materno" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="160" width="374" height="40"/>
+                                                        <rect key="frame" x="0.0" y="158" width="374" height="65"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="7AN-eZ-wQt"/>
+                                                            <constraint firstAttribute="height" constant="65" id="7AN-eZ-wQt"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDw-ux-cOu" userLabel="Correo Electronico" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="240" width="374" height="40"/>
+                                                        <rect key="frame" x="0.0" y="237" width="374" height="65"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="wGP-Ja-CEY"/>
+                                                            <constraint firstAttribute="height" constant="65" id="wGP-Ja-CEY"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXr-zw-OMa" userLabel="Celular" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="320" width="374" height="40"/>
+                                                        <rect key="frame" x="0.0" y="316" width="374" height="65"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="Fcu-Yz-sFn"/>
+                                                            <constraint firstAttribute="height" constant="65" id="Fcu-Yz-sFn"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRk-Nh-VfP">
-                                                        <rect key="frame" x="0.0" y="400" width="374" height="50"/>
+                                                        <rect key="frame" x="0.0" y="395" width="374" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Dx8-e8-jHS"/>
@@ -122,7 +122,7 @@
                                             <constraint firstItem="BBL-Km-esl" firstAttribute="leading" secondItem="Gkh-UJ-mWV" secondAttribute="leading" constant="20" symbolic="YES" id="MDc-Or-3us"/>
                                             <constraint firstItem="1pn-Sn-HtR" firstAttribute="centerX" secondItem="Gkh-UJ-mWV" secondAttribute="centerX" id="P6j-dG-cp9"/>
                                             <constraint firstItem="PR9-nN-vqJ" firstAttribute="leading" secondItem="Gkh-UJ-mWV" secondAttribute="leading" id="VTc-Wi-BJB"/>
-                                            <constraint firstItem="1pn-Sn-HtR" firstAttribute="top" secondItem="Gkh-UJ-mWV" secondAttribute="top" constant="5" id="bKV-wJ-tMh"/>
+                                            <constraint firstItem="1pn-Sn-HtR" firstAttribute="top" secondItem="Gkh-UJ-mWV" secondAttribute="top" id="bKV-wJ-tMh"/>
                                             <constraint firstAttribute="trailing" secondItem="PR9-nN-vqJ" secondAttribute="trailing" id="lsH-2I-aqx"/>
                                         </constraints>
                                     </view>
@@ -143,8 +143,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="bF9-FG-UQq" firstAttribute="top" secondItem="mN1-qy-a2w" secondAttribute="top" id="1eB-B5-yJb"/>
-                            <constraint firstItem="bF9-FG-UQq" firstAttribute="leading" secondItem="mN1-qy-a2w" secondAttribute="leading" constant="20" id="JSS-4C-zMh"/>
-                            <constraint firstItem="mN1-qy-a2w" firstAttribute="trailing" secondItem="bF9-FG-UQq" secondAttribute="trailing" constant="20" id="hnU-7R-RyM"/>
+                            <constraint firstItem="bF9-FG-UQq" firstAttribute="leading" secondItem="J3W-7o-KJt" secondAttribute="leadingMargin" id="Grs-zW-KJt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bF9-FG-UQq" secondAttribute="trailing" id="MnG-U8-MKS"/>
                             <constraint firstItem="mN1-qy-a2w" firstAttribute="bottom" secondItem="bF9-FG-UQq" secondAttribute="bottom" id="qsJ-JZ-7cu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mN1-qy-a2w"/>
@@ -154,8 +154,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="gbn-G0-xxu">
-                        <barButtonItem key="rightBarButtonItem" image="chart.bar" catalog="system" id="lcG-YY-o9C"/>
+                    <navigationItem key="navigationItem" title="Datos" id="gbn-G0-xxu">
+                        <barButtonItem key="backBarButtonItem" title="Datos" id="d4e-VV-ItR"/>
+                        <barButtonItem key="rightBarButtonItem" image="chart.bar" catalog="system" id="lcG-YY-o9C">
+                            <connections>
+                                <segue destination="8bI-k2-Xjz" kind="show" identifier="stats" id="Oa1-xL-L14"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cellphone" destination="KXr-zw-OMa" id="3NN-da-1X9"/>
@@ -164,19 +169,154 @@
                         <outlet property="mail" destination="LDw-ux-cOu" id="E0n-lM-FMw"/>
                         <outlet property="nameLabel" destination="Io0-GR-WNw" id="fhd-Rh-j0a"/>
                         <outlet property="saveButton" destination="QRk-Nh-VfP" id="Oeo-jO-vgi"/>
+                        <outlet property="scrollView" destination="bF9-FG-UQq" id="1sV-V8-rPA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8K-Vc-f2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="997.10144927536237" y="77.678571428571431"/>
+            <point key="canvasLocation" x="825" y="78"/>
+        </scene>
+        <!--Usuarios-->
+        <scene sceneID="9UY-hN-9Wj">
+            <objects>
+                <tableViewController id="8bI-k2-Xjz" customClass="ResultsViewController" customModule="FormToSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zvx-TV-8n3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="tE9-Do-Coi" customClass="UserCell" customModule="FormToSurvey" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="143"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tE9-Do-Coi" id="4dS-am-XNn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WIo-IH-w9V">
+                                            <rect key="frame" x="20" y="10" width="374" height="123"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="a59-9R-4we">
+                                                    <rect key="frame" x="0.0" y="0.0" width="208" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre(s): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddr-H0-0X6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="98.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gabriel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mal-Wm-Ttv">
+                                                            <rect key="frame" x="153.5" y="0.0" width="54.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="AnS-gN-A2O">
+                                                    <rect key="frame" x="0.0" y="25.5" width="189.5" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido Paterno:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wll-nh-IYf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avila" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zx0-xA-gaZ">
+                                                            <rect key="frame" x="154" y="0.0" width="35.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ua4-c9-tvA">
+                                                    <rect key="frame" x="0.0" y="51" width="214" height="21"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido Materno:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2i-Ri-OsP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="145.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olmedo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsb-BC-rLr">
+                                                            <rect key="frame" x="153.5" y="0.0" width="60.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="101" translatesAutoresizingMaskIntoConstraints="NO" id="HWy-Jm-lnX">
+                                                    <rect key="frame" x="0.0" y="77" width="278" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gB-pF-uwB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="54" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gab@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lH-eG-Mcb">
+                                                            <rect key="frame" x="155" y="0.0" width="123" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="RBO-50-sQf">
+                                                    <rect key="frame" x="0.0" y="102.5" width="254" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOe-N4-S8u">
+                                                            <rect key="frame" x="0.0" y="0.0" width="76" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7841045498" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvY-aC-qzU">
+                                                            <rect key="frame" x="154" y="0.0" width="100" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="WIo-IH-w9V" secondAttribute="bottom" constant="10" id="DdE-Tu-2DU"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="WIo-IH-w9V" secondAttribute="trailing" id="LON-z7-dpH"/>
+                                        <constraint firstItem="WIo-IH-w9V" firstAttribute="leading" secondItem="4dS-am-XNn" secondAttribute="leadingMargin" id="jZh-KX-JPs"/>
+                                        <constraint firstItem="WIo-IH-w9V" firstAttribute="top" secondItem="4dS-am-XNn" secondAttribute="top" constant="10" id="nbu-4Q-JKm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellphone" destination="bvY-aC-qzU" id="RkV-2S-gYm"/>
+                                    <outlet property="email" destination="6lH-eG-Mcb" id="GkM-Ju-d0K"/>
+                                    <outlet property="lastNameFather" destination="Zx0-xA-gaZ" id="F6c-3Q-pmf"/>
+                                    <outlet property="lastNameMother" destination="Hsb-BC-rLr" id="ho4-r5-eza"/>
+                                    <outlet property="nameLabel" destination="Mal-Wm-Ttv" id="y2g-F0-M9L"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8bI-k2-Xjz" id="D4t-9y-Hms"/>
+                            <outlet property="delegate" destination="8bI-k2-Xjz" id="d42-eg-fwd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Usuarios" id="e32-Zw-9Hb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgL-NV-hdR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599" y="78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DC0-U2-Jm3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SbW-Gd-fBi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="iGZ-G3-ETJ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iGZ-G3-ETJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -191,6 +331,6 @@
     </scenes>
     <resources>
         <image name="chart.bar" catalog="system" width="64" height="44"/>
-        <image name="people" width="48" height="48"/>
+        <image name="person.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>

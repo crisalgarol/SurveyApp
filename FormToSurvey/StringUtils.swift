@@ -28,4 +28,26 @@ class StringUtils {
         return NSPredicate(format: "SELF MATCHES %@", rule).evaluate(with: rule)
     }
     
+    static func evaluate(type: textFieldType, string: String) -> Bool{
+        switch type {
+        case .phone:
+            return isValidCellphoneNumber(number: string)
+        case .email:
+            return isValidEmail(mail: string)
+        case .name:
+            return isValidNameOrLastname(name: string)
+        }
+    }
+    
+    static func getErrorMessage(forType type: textFieldType) -> String {
+        switch type {
+        case .email:
+            return "Email incorrecto"
+        case .name:
+            return "No debes usar caracteres"
+        case .phone:
+            return "Deben ser 10 digitos"
+        }
+    }
+    
 }
