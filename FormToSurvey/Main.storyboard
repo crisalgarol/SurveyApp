@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SbW-Gd-fBi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Daq-oC-tnT">
+            <objects>
+                <viewController id="pVu-oU-RPQ" customClass="ViewController" customModule="FormToSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J3W-7o-KJt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqT-jd-cjM" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
+                                <rect key="frame" x="10" y="423" width="394" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-FG-UQq">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gkh-UJ-mWV" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="636"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="1pn-Sn-HtR">
+                                                <rect key="frame" x="137" y="5" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="3J4-c5-r8u"/>
+                                                    <constraint firstAttribute="height" constant="100" id="BHx-oC-JIP"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor llena el siguiente formulario con tus datos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBL-Km-esl">
+                                                <rect key="frame" x="20" y="115" width="354" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="PR9-nN-vqJ">
+                                                <rect key="frame" x="0.0" y="166" width="374" height="450"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io0-GR-WNw" userLabel="Nombre" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Vga-Xv-ajN"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeD-EW-gCH" userLabel="Apellido Paterno" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="80" width="374" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="W8j-LW-NXx"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t58-6h-3f2" userLabel="Apellido Materno" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="160" width="374" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="7AN-eZ-wQt"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDw-ux-cOu" userLabel="Correo Electronico" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="240" width="374" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="wGP-Ja-CEY"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXr-zw-OMa" userLabel="Celular" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="320" width="374" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Fcu-Yz-sFn"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FormTextField"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRk-Nh-VfP">
+                                                        <rect key="frame" x="0.0" y="400" width="374" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Dx8-e8-jHS"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <state key="normal" title="Guardar">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="save:" destination="pVu-oU-RPQ" eventType="touchUpInside" id="Dw1-h3-N3h"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="PR9-nN-vqJ" secondAttribute="bottom" constant="20" id="62f-wF-6LP"/>
+                                            <constraint firstItem="PR9-nN-vqJ" firstAttribute="top" secondItem="BBL-Km-esl" secondAttribute="bottom" constant="10" id="6jK-oy-21r"/>
+                                            <constraint firstItem="BBL-Km-esl" firstAttribute="top" secondItem="1pn-Sn-HtR" secondAttribute="bottom" constant="10" id="AdG-HV-YBd"/>
+                                            <constraint firstAttribute="trailing" secondItem="BBL-Km-esl" secondAttribute="trailing" id="CLf-51-shX"/>
+                                            <constraint firstItem="BBL-Km-esl" firstAttribute="leading" secondItem="Gkh-UJ-mWV" secondAttribute="leading" constant="20" symbolic="YES" id="MDc-Or-3us"/>
+                                            <constraint firstItem="1pn-Sn-HtR" firstAttribute="centerX" secondItem="Gkh-UJ-mWV" secondAttribute="centerX" id="P6j-dG-cp9"/>
+                                            <constraint firstItem="PR9-nN-vqJ" firstAttribute="leading" secondItem="Gkh-UJ-mWV" secondAttribute="leading" id="VTc-Wi-BJB"/>
+                                            <constraint firstItem="1pn-Sn-HtR" firstAttribute="top" secondItem="Gkh-UJ-mWV" secondAttribute="top" constant="5" id="bKV-wJ-tMh"/>
+                                            <constraint firstAttribute="trailing" secondItem="PR9-nN-vqJ" secondAttribute="trailing" id="lsH-2I-aqx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Gkh-UJ-mWV" firstAttribute="height" secondItem="bF9-FG-UQq" secondAttribute="height" priority="250" id="7mH-Vy-JdE"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gkh-UJ-mWV" secondAttribute="bottom" id="K3L-24-rAc"/>
+                                    <constraint firstItem="Gkh-UJ-mWV" firstAttribute="leading" secondItem="bF9-FG-UQq" secondAttribute="leading" id="V7H-td-eVu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gkh-UJ-mWV" secondAttribute="trailing" id="YVh-5L-k2O"/>
+                                    <constraint firstItem="Gkh-UJ-mWV" firstAttribute="top" secondItem="bF9-FG-UQq" secondAttribute="top" id="YY3-b5-U11"/>
+                                    <constraint firstItem="Gkh-UJ-mWV" firstAttribute="width" secondItem="bF9-FG-UQq" secondAttribute="width" id="kOn-nF-3tn"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="VAK-9o-xH6"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="qOO-JO-txp"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bF9-FG-UQq" firstAttribute="top" secondItem="mN1-qy-a2w" secondAttribute="top" id="1eB-B5-yJb"/>
+                            <constraint firstItem="bF9-FG-UQq" firstAttribute="leading" secondItem="mN1-qy-a2w" secondAttribute="leading" constant="20" id="JSS-4C-zMh"/>
+                            <constraint firstItem="mN1-qy-a2w" firstAttribute="trailing" secondItem="bF9-FG-UQq" secondAttribute="trailing" constant="20" id="hnU-7R-RyM"/>
+                            <constraint firstItem="mN1-qy-a2w" firstAttribute="bottom" secondItem="bF9-FG-UQq" secondAttribute="bottom" id="qsJ-JZ-7cu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mN1-qy-a2w"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bqT-jd-cjM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="gbn-G0-xxu">
+                        <barButtonItem key="rightBarButtonItem" image="chart.bar" catalog="system" id="lcG-YY-o9C"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cellphone" destination="KXr-zw-OMa" id="3NN-da-1X9"/>
+                        <outlet property="lastNameFather" destination="YeD-EW-gCH" id="l4A-XF-Lpz"/>
+                        <outlet property="lastNameMother" destination="t58-6h-3f2" id="1TD-rf-jVp"/>
+                        <outlet property="mail" destination="LDw-ux-cOu" id="E0n-lM-FMw"/>
+                        <outlet property="nameLabel" destination="Io0-GR-WNw" id="fhd-Rh-j0a"/>
+                        <outlet property="saveButton" destination="QRk-Nh-VfP" id="Oeo-jO-vgi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8K-Vc-f2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.10144927536237" y="77.678571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DC0-U2-Jm3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SbW-Gd-fBi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="iGZ-G3-ETJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pVu-oU-RPQ" kind="relationship" relationship="rootViewController" id="2tD-Yg-iX2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNh-T6-NTS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart.bar" catalog="system" width="64" height="44"/>
+        <image name="people" width="48" height="48"/>
+    </resources>
+</document>
