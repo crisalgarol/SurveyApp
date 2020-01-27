@@ -34,6 +34,11 @@ class XIBView: UIView {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
+    func setPresenterReference(presenter: PresenterProtocol){
+        guard var cv = self.contentView as? TextFieldProtocol else {return}
+        cv.presenter = presenter
+    }
+    
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         xibSetup()
@@ -41,3 +46,5 @@ class XIBView: UIView {
     }
 
 }
+
+

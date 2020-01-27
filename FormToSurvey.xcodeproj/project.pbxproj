@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3137D04623DAB8680000524A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137D04523DAB8680000524A /* AppDelegate.swift */; };
-		3137D04A23DAB8680000524A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137D04923DAB8680000524A /* ViewController.swift */; };
+		3137D04A23DAB8680000524A /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137D04923DAB8680000524A /* SurveyViewController.swift */; };
 		3137D04F23DAB86A0000524A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3137D04E23DAB86A0000524A /* Assets.xcassets */; };
 		3137D05223DAB86A0000524A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3137D05023DAB86A0000524A /* LaunchScreen.storyboard */; };
 		3159517523DBD7B700C0DAC7 /* Survey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3159517323DBD7B700C0DAC7 /* Survey.xcdatamodeld */; };
@@ -18,18 +18,23 @@
 		3159518123DC066A00C0DAC7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3159518023DC066A00C0DAC7 /* UserCell.swift */; };
 		3159518323DC0A2500C0DAC7 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3159518223DC0A2500C0DAC7 /* ResultsViewController.swift */; };
 		3159518523DCA8A500C0DAC7 /* ConstantUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3159518423DCA8A500C0DAC7 /* ConstantUtils.swift */; };
+		31939DF123DF363A00FADCA8 /* TextFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31939DF023DF363A00FADCA8 /* TextFieldProtocol.swift */; };
+		31939DF323DF367900FADCA8 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31939DF223DF367900FADCA8 /* PresenterProtocol.swift */; };
 		31CA957B23DAE0EC008C23B0 /* BottomBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CA957A23DAE0EC008C23B0 /* BottomBorderedTextField.swift */; };
 		31CA957D23DB7080008C23B0 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CA957C23DB707F008C23B0 /* StringUtils.swift */; };
+		31CE128F23DD0B9900EB62AE /* SurveyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CE128E23DD0B9900EB62AE /* SurveyPresenter.swift */; };
+		31CE129323DD0BC000EB62AE /* SurveyPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CE129223DD0BC000EB62AE /* SurveyPresenterProtocol.swift */; };
 		31E5E84023DAC5890024C97F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31E5E83F23DAC5890024C97F /* Main.storyboard */; };
 		31E5E84223DACB700024C97F /* XIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5E84123DACB700024C97F /* XIBView.swift */; };
 		31E5E84423DACBCA0024C97F /* FormTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31E5E84323DACBCA0024C97F /* FormTextField.xib */; };
 		31E5E84623DACBD80024C97F /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5E84523DACBD80024C97F /* FormTextField.swift */; };
+		31F79F6223DD0D0C00848C69 /* SurveyViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F79F6123DD0D0C00848C69 /* SurveyViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3137D04223DAB8680000524A /* FormToSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormToSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3137D04523DAB8680000524A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3137D04923DAB8680000524A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3137D04923DAB8680000524A /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		3137D04E23DAB86A0000524A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3137D05123DAB86A0000524A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3137D05323DAB86A0000524A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,12 +45,17 @@
 		3159518023DC066A00C0DAC7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		3159518223DC0A2500C0DAC7 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		3159518423DCA8A500C0DAC7 /* ConstantUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantUtils.swift; sourceTree = "<group>"; };
+		31939DF023DF363A00FADCA8 /* TextFieldProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldProtocol.swift; sourceTree = "<group>"; };
+		31939DF223DF367900FADCA8 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		31CA957A23DAE0EC008C23B0 /* BottomBorderedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderedTextField.swift; sourceTree = "<group>"; };
 		31CA957C23DB707F008C23B0 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		31CE128E23DD0B9900EB62AE /* SurveyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPresenter.swift; sourceTree = "<group>"; };
+		31CE129223DD0BC000EB62AE /* SurveyPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPresenterProtocol.swift; sourceTree = "<group>"; };
 		31E5E83F23DAC5890024C97F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		31E5E84123DACB700024C97F /* XIBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIBView.swift; sourceTree = "<group>"; };
 		31E5E84323DACBCA0024C97F /* FormTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextField.xib; sourceTree = "<group>"; };
 		31E5E84523DACBD80024C97F /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		31F79F6123DD0D0C00848C69 /* SurveyViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,26 +88,159 @@
 		3137D04423DAB8680000524A /* FormToSurvey */ = {
 			isa = PBXGroup;
 			children = (
-				3137D04523DAB8680000524A /* AppDelegate.swift */,
-				3159518223DC0A2500C0DAC7 /* ResultsViewController.swift */,
-				3137D04923DAB8680000524A /* ViewController.swift */,
-				3137D04E23DAB86A0000524A /* Assets.xcassets */,
-				31CA957A23DAE0EC008C23B0 /* BottomBorderedTextField.swift */,
-				3159518423DCA8A500C0DAC7 /* ConstantUtils.swift */,
-				3159517623DBD89300C0DAC7 /* CoreDataStack.swift */,
-				31E5E84523DACBD80024C97F /* FormTextField.swift */,
-				31E5E84323DACBCA0024C97F /* FormTextField.xib */,
+				31CE128123DD062A00EB62AE /* AppDelegate */,
 				3137D05323DAB86A0000524A /* Info.plist */,
-				3137D05023DAB86A0000524A /* LaunchScreen.storyboard */,
-				31E5E83F23DAC5890024C97F /* Main.storyboard */,
-				3159518023DC066A00C0DAC7 /* UserCell.swift */,
-				31CA957C23DB707F008C23B0 /* StringUtils.swift */,
-				3159517C23DBE23900C0DAC7 /* User+CoreDataClass.swift */,
-				3159517D23DBE23900C0DAC7 /* User+CoreDataProperties.swift */,
-				3159517323DBD7B700C0DAC7 /* Survey.xcdatamodeld */,
-				31E5E84123DACB700024C97F /* XIBView.swift */,
+				31CE128523DD06F900EB62AE /* Resources */,
+				31CE128323DD065100EB62AE /* Storage */,
+				31CE128223DD064600EB62AE /* Survey */,
+				31CE128423DD066500EB62AE /* Utils */,
 			);
 			path = FormToSurvey;
+			sourceTree = "<group>";
+		};
+		31939DEF23DF362F00FADCA8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				31939DF023DF363A00FADCA8 /* TextFieldProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		31939DF423DF54DB00FADCA8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3159518223DC0A2500C0DAC7 /* ResultsViewController.swift */,
+				3137D04923DAB8680000524A /* SurveyViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31CE128123DD062A00EB62AE /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3137D04523DAB8680000524A /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		31CE128223DD064600EB62AE /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				31CE128923DD099100EB62AE /* View + Controllers */,
+				31CE128823DD087000EB62AE /* Presenter */,
+				31CE128723DD086300EB62AE /* Model */,
+				31CE128623DD085C00EB62AE /* Extension */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		31CE128323DD065100EB62AE /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				3159517623DBD89300C0DAC7 /* CoreDataStack.swift */,
+				3159517323DBD7B700C0DAC7 /* Survey.xcdatamodeld */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		31CE128423DD066500EB62AE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3159518423DCA8A500C0DAC7 /* ConstantUtils.swift */,
+				31CA957C23DB707F008C23B0 /* StringUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		31CE128523DD06F900EB62AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3137D04E23DAB86A0000524A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		31CE128623DD085C00EB62AE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		31CE128723DD086300EB62AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3159517C23DBE23900C0DAC7 /* User+CoreDataClass.swift */,
+				3159517D23DBE23900C0DAC7 /* User+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		31CE128823DD087000EB62AE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				31CE129023DD0B9E00EB62AE /* Protocols */,
+				31CE128E23DD0B9900EB62AE /* SurveyPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		31CE128923DD099100EB62AE /* View + Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				31939DF423DF54DB00FADCA8 /* ViewControllers */,
+				31CE128C23DD0A2000EB62AE /* Custom Views */,
+				31CE128D23DD0A5F00EB62AE /* CustomCells */,
+				31CE129423DD0CDB00EB62AE /* Protocols */,
+				31CE128A23DD099E00EB62AE /* Views */,
+			);
+			path = "View + Controllers";
+			sourceTree = "<group>";
+		};
+		31CE128A23DD099E00EB62AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3137D05023DAB86A0000524A /* LaunchScreen.storyboard */,
+				31E5E83F23DAC5890024C97F /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		31CE128C23DD0A2000EB62AE /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				31939DEF23DF362F00FADCA8 /* Protocols */,
+				31E5E84523DACBD80024C97F /* FormTextField.swift */,
+				31E5E84123DACB700024C97F /* XIBView.swift */,
+				31CA957A23DAE0EC008C23B0 /* BottomBorderedTextField.swift */,
+				31E5E84323DACBCA0024C97F /* FormTextField.xib */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		31CE128D23DD0A5F00EB62AE /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				3159518023DC066A00C0DAC7 /* UserCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		31CE129023DD0B9E00EB62AE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				31CE129223DD0BC000EB62AE /* SurveyPresenterProtocol.swift */,
+				31939DF223DF367900FADCA8 /* PresenterProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		31CE129423DD0CDB00EB62AE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				31F79F6123DD0D0C00848C69 /* SurveyViewProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +317,9 @@
 			files = (
 				3159517523DBD7B700C0DAC7 /* Survey.xcdatamodeld in Sources */,
 				31CA957D23DB7080008C23B0 /* StringUtils.swift in Sources */,
-				3137D04A23DAB8680000524A /* ViewController.swift in Sources */,
+				31939DF323DF367900FADCA8 /* PresenterProtocol.swift in Sources */,
+				31939DF123DF363A00FADCA8 /* TextFieldProtocol.swift in Sources */,
+				3137D04A23DAB8680000524A /* SurveyViewController.swift in Sources */,
 				31E5E84623DACBD80024C97F /* FormTextField.swift in Sources */,
 				31E5E84223DACB700024C97F /* XIBView.swift in Sources */,
 				3159517E23DBE23900C0DAC7 /* User+CoreDataClass.swift in Sources */,
@@ -182,8 +327,11 @@
 				3159518123DC066A00C0DAC7 /* UserCell.swift in Sources */,
 				3137D04623DAB8680000524A /* AppDelegate.swift in Sources */,
 				31CA957B23DAE0EC008C23B0 /* BottomBorderedTextField.swift in Sources */,
+				31CE129323DD0BC000EB62AE /* SurveyPresenterProtocol.swift in Sources */,
 				3159517F23DBE23900C0DAC7 /* User+CoreDataProperties.swift in Sources */,
 				3159517723DBD89300C0DAC7 /* CoreDataStack.swift in Sources */,
+				31CE128F23DD0B9900EB62AE /* SurveyPresenter.swift in Sources */,
+				31F79F6223DD0D0C00848C69 /* SurveyViewProtocol.swift in Sources */,
 				3159518323DC0A2500C0DAC7 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

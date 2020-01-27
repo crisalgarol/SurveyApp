@@ -9,12 +9,14 @@
 import UIKit
 
 @IBDesignable
-class FormTextField: UIView {
+class FormTextField: UIView, TextFieldProtocol {
+    
+    var presenter: PresenterProtocol?
 
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var textField: BottomBorderedTextField!
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -37,11 +39,10 @@ class FormTextField: UIView {
 
     @IBAction func onEditing(_ sender: BottomBorderedTextField) {
         guard let text = sender.text else {return}
-        
-        print("EM: \(StringUtils.getErrorMessage(forType: sender.type))")
+        guard let presenter = presenter else {return}
 
-        if StringUtils.evaluate(type: sender.type, string: text) {
-            self.infoLabel.text = StringUtils.getErrorMessage(forType: sender.type)
+        if presenter.evaluateString(forType: sender.type, string: text) {
+            self.infoLabel.text = presenter.getErrorMessage(forType: sender.type)
             
             UIView.animate(withDuration: 0.5) {
                 self.infoLabel.alpha = 0.0
@@ -50,7 +51,7 @@ class FormTextField: UIView {
             }
             
           } else {
-                self.infoLabel.text = StringUtils.getErrorMessage(forType: sender.type)
+                self.infoLabel.text = presenter.getErrorMessage(forType: sender.type)
                 
             UIView.animate(withDuration: 0.5) {
                 self.infoLabel.alpha = 1.0
@@ -59,6 +60,7 @@ class FormTextField: UIView {
           }
     }
     
-    
-    
+    func setPresenter(presenter: PresenterProtocol) {
+        self.presenter = presenter
+    }
 }

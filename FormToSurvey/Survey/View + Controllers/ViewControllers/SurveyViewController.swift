@@ -9,8 +9,8 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
-
+class SurveyViewController: UIViewController, SurveyViewProtocol {
+    
     @IBOutlet weak var nameLabel: XIBView!
     @IBOutlet weak var lastNameFather: XIBView!
     @IBOutlet weak var lastNameMother: XIBView!
@@ -19,13 +19,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    
     //MARK: - Properties
-    var managedContext: NSManagedObjectContext?
     var activeField: BottomBorderedTextField?
+    var presenter: SurveyPresenter? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,13 +38,14 @@ class ViewController: UIViewController {
         
     }
     
+    //MARK: UISetup
     func setupView() {
         guard let nameField = nameLabel.contentView as? FormTextField else {return}
         guard let lastNameFatherField = lastNameFather.contentView as? FormTextField else {return}
         guard let lastNameMotherField = lastNameMother.contentView as? FormTextField else {return}
         guard let mailField = mail.contentView as? FormTextField else {return}
         guard let cellphoneField = cellphone.contentView as? FormTextField else {return}
-        
+        guard let presenter = presenter else {return}
         self.activeField = BottomBorderedTextField()
         
         //Dismiss keyboard
@@ -62,6 +63,13 @@ class ViewController: UIViewController {
         lastNameMotherField.textField.type = .name
         mailField.textField.type = .email
         cellphoneField.textField.type = .phone
+        
+        //Set the delegate to TextFields
+        nameField.presenter = self.presenter
+        lastNameMotherField.presenter = self.presenter
+        lastNameFatherField.presenter = self.presenter
+        mailField.presenter = self.presenter
+        cellphoneField.presenter = self.presenter
         
         //SetBackground
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -94,6 +102,7 @@ class ViewController: UIViewController {
  
     }
 
+    //MARK: -Keyboard Management
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
     }
@@ -122,63 +131,46 @@ class ViewController: UIViewController {
     
     //MARK: - Model functions
     
-    func saveUser() -> Bool {
-        
-        guard let nameT = (nameLabel.contentView as? FormTextField)?.textField.text else {return false}
-        guard let lastNameFatherT = (lastNameFather.contentView as? FormTextField)?.textField.text else {return false}
-        guard let lastNameMotherT = (lastNameMother.contentView as? FormTextField)?.textField.text else {return false}
-        guard let mailT = (mail.contentView as? FormTextField)?.textField.text else {return false}
-        guard let cellphoneT = (cellphone.contentView as? FormTextField)?.textField.text else {return false}
-        
-        
-        
-        guard let managedContext = managedContext else {return false}
-        guard let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext) else {return false}
-        
-        let user = User(entity: entity, insertInto: managedContext)
-        user.name = nameT
-        user.lastnameMother = lastNameMotherT
-        user.lastnameFather = lastNameFatherT
-        user.cellphone = cellphoneT
-        user.email = mailT
-        
-        do {
-            try managedContext.save()
-            return true
-        } catch let error as NSError {
-        print("Error at saving \(error): \(error.userInfo)")
-            return false
-        }
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "stats" else {return}
         guard let resultsVC = segue.destination as? ResultsViewController else {return}
-        resultsVC.managedContext = managedContext
+        resultsVC.managedContext = self.presenter?.managedContext 
     }
     
-    @IBAction func save(_ sender: Any) {
-        
-        var title = ""
-        var msg = ""
-        var action = UIAlertAction(title: "", style: .default, handler: nil)
-        
-        if saveUser() {
-            title = "¡Guardado!"
-            msg = "Se ha guardado tu información"
-            action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        } else {
-            title = "Error"
-            msg = "Error al guardar"
-            action = UIAlertAction(title: "OK", style: .destructive, handler: nil)
-        }
+    func showAlertController(title: String, type: String, message: String, actionTitle: String, mustCleanUI: Bool) {
+        let action = UIAlertAction(title: actionTitle, style: type == "cancel" ? .cancel : .destructive, handler: nil)
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+             ac.addAction(action)
+             
+        present(ac, animated: true) { [unowned self] in
+            if mustCleanUI {
+                guard let nameTF = self.nameLabel.contentView as? BottomBorderedTextField else {return}
+                guard let lastNameTF = self.lastNameFather.contentView as? BottomBorderedTextField else {return}
+                guard let lastNameMotherTF = self.lastNameMother.contentView as? BottomBorderedTextField else {return}
+                guard let emailTF = self.mail.contentView as? BottomBorderedTextField else {return}
+                guard let cellphoneNumberTF = self.cellphone.contentView as? BottomBorderedTextField else {return}
 
-        let ac = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        ac.addAction(action)
+                nameTF.text = ""
+                lastNameTF.text = ""
+                lastNameMotherTF.text = ""
+                emailTF.text = ""
+                cellphoneNumberTF.text = ""
+            }
+        }
+            
+        }
+            
         
-        present(ac, animated: true, completion: nil)
+    @IBAction func save(_ sender: Any) {
+        guard let presenter = presenter else {return}
+        guard let nameT = (nameLabel.contentView as? FormTextField)?.textField.text else {return}
+        guard let lastNameFatherT = (lastNameFather.contentView as? FormTextField)?.textField.text else {return}
+        guard let lastNameMotherT = (lastNameMother.contentView as? FormTextField)?.textField.text else {return}
+        guard let mailT = (mail.contentView as? FormTextField)?.textField.text else {return}
+        guard let cellphoneT = (cellphone.contentView as? FormTextField)?.textField.text else {return}
+        
+        presenter.saveToDB(name: nameT, lastName: lastNameFatherT, lastNameMother: lastNameMotherT, email: mailT, cellphoneNumber: cellphoneT)
+                
     }
     
 }
-

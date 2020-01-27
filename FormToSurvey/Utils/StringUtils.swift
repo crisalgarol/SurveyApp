@@ -24,8 +24,18 @@ class StringUtils {
     }
     
     static func isValidNameOrLastname(name: String) -> Bool{
-        let rule = "^[a-zA-z]$"
-        return NSPredicate(format: "SELF MATCHES %@", rule).evaluate(with: rule)
+
+        for letter in name {
+            
+            let isValidLetter = letter == " " || letter == "Á" || letter == "á" || letter == "É" || letter == "é" || letter == "Í" || letter == "í" || letter == "Ó" || letter == "ó" || letter == "Ú" || letter == "ú" || letter == "Ñ" || letter == "ñ"
+            
+            
+            if !letter.isLetter && !isValidLetter {
+                return false
+            }
+        }
+        
+        return true
     }
     
     static func evaluate(type: textFieldType, string: String) -> Bool{

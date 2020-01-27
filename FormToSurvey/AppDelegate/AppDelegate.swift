@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         guard let navController = window?.rootViewController as? UINavigationController else {return true}
-        guard let firstView = navController.topViewController as? ViewController else {return true}
+        guard let firstView = navController.topViewController as? SurveyViewController else {return true}
                 
-        firstView.managedContext = self.coreDataStack.managedContext
+        firstView.presenter = SurveyPresenter(managedContext: self.coreDataStack.managedContext)
         
         return true
     }
