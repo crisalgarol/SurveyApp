@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SbW-Gd-fBi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,7 +12,7 @@
             <objects>
                 <viewController id="pVu-oU-RPQ" customClass="SurveyViewController" customModule="FormToSurvey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J3W-7o-KJt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqT-jd-cjM" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
@@ -23,29 +24,29 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-FG-UQq">
-                                <rect key="frame" x="20" y="44" width="560" height="556"/>
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gkh-UJ-mWV" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="604.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="623.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1pn-Sn-HtR">
-                                                <rect key="frame" x="230" y="0.5" width="100" height="99"/>
+                                                <rect key="frame" x="137" y="0.5" width="100" height="99"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="3J4-c5-r8u"/>
                                                     <constraint firstAttribute="height" constant="100" id="BHx-oC-JIP"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor llena el siguiente formulario con tus datos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBL-Km-esl">
-                                                <rect key="frame" x="20" y="110" width="540" height="19.5"/>
+                                                <rect key="frame" x="20" y="110" width="354" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="PR9-nN-vqJ">
-                                                <rect key="frame" x="0.0" y="139.5" width="560" height="445"/>
+                                                <rect key="frame" x="0.0" y="158.5" width="374" height="445"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io0-GR-WNw" userLabel="Nombre" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="65" id="Vga-Xv-ajN"/>
@@ -55,7 +56,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeD-EW-gCH" userLabel="Apellido Paterno" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="79" width="560" height="65"/>
+                                                        <rect key="frame" x="0.0" y="79" width="374" height="65"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="65" id="W8j-LW-NXx"/>
@@ -65,7 +66,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t58-6h-3f2" userLabel="Apellido Materno" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="158" width="560" height="65"/>
+                                                        <rect key="frame" x="0.0" y="158" width="374" height="65"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="65" id="7AN-eZ-wQt"/>
@@ -75,7 +76,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDw-ux-cOu" userLabel="Correo Electronico" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="237" width="560" height="65"/>
+                                                        <rect key="frame" x="0.0" y="237" width="374" height="65"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="65" id="wGP-Ja-CEY"/>
@@ -85,7 +86,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXr-zw-OMa" userLabel="Celular" customClass="XIBView" customModule="FormToSurvey" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="316" width="560" height="65"/>
+                                                        <rect key="frame" x="0.0" y="316" width="374" height="65"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="65" id="Fcu-Yz-sFn"/>
@@ -95,7 +96,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRk-Nh-VfP">
-                                                        <rect key="frame" x="0.0" y="395" width="560" height="50"/>
+                                                        <rect key="frame" x="0.0" y="395" width="374" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Dx8-e8-jHS"/>
@@ -180,19 +181,19 @@
             <objects>
                 <tableViewController id="8bI-k2-Xjz" customClass="ResultsViewController" customModule="FormToSurvey" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zvx-TV-8n3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="tE9-Do-Coi" customClass="UserCell" customModule="FormToSurvey" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="143"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="143"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tE9-Do-Coi" id="4dS-am-XNn">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="143"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WIo-IH-w9V">
-                                            <rect key="frame" x="20" y="10" width="560" height="123"/>
+                                            <rect key="frame" x="20" y="10" width="374" height="123"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="a59-9R-4we">
                                                     <rect key="frame" x="0.0" y="0.0" width="208" height="20.5"/>

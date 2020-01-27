@@ -22,10 +22,35 @@ class SurveyViewController: UIViewController, SurveyViewProtocol {
     //MARK: - Properties
     var activeField: BottomBorderedTextField?
     var presenter: SurveyPresenter? = nil
+    var isFirstime = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.delegate = self
+        
+        
+        self.nameLabel.contentView?.alpha = 0.0
+        self.lastNameFather.contentView?.alpha = 0.0
+        self.lastNameMother.contentView?.alpha = 0.0
+        self.mail.contentView?.alpha = 0.0
+        self.cellphone.contentView?.alpha = 0.0
+
+        
+        if isFirstime {
+            
+            UIView.animate(withDuration: 1.0, delay: 0.1,
+                                  usingSpringWithDamping: 2.0, initialSpringVelocity: 0.0, options: [], animations: {
+                                    self.nameLabel.contentView?.alpha = 1.0
+                                    self.lastNameFather.contentView?.alpha = 1.0
+                                    self.lastNameMother.contentView?.alpha = 1.0
+                                    self.mail.contentView?.alpha = 1.0
+                                    self.cellphone.contentView?.alpha = 1.0
+                   }, completion: {_ in
+                   })
+            
+            isFirstime = false
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
